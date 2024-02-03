@@ -1,22 +1,24 @@
 package com.nimetseyrek.myfirstandroidproject
-
 import android.os.Bundle
+import android.view.View
 import androidx.activity.ComponentActivity
-import androidx.activity.compose.setContent
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Surface
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
-import com.nimetseyrek.myfirstandroidproject.ui.theme.MyFirstAndroidProjectTheme
+import com.nimetseyrek.myfirstandroidproject.databinding.ActivityMainBinding
 
 class MainActivity : ComponentActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
+
         super.onCreate(savedInstanceState)
-            setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main)
             }
-        }
+    fun degistir(view : View) {
+        var binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+        // Access views using View Binding
+        binding.textView.text = "Merve Akdeniz"
+    }
+
+
+}
 
 
