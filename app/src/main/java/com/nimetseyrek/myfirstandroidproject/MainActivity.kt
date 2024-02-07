@@ -32,12 +32,9 @@ class MainActivity : ComponentActivity() {
         binding.textView.text = "Merve Akdeniz"
     }*/
 
-@SuppressLint("SetTextI18n")
+
 fun sinifCalismasi(){
-    var superman = SuperKahraman()
-    superman.isim="Superman"
-    superman.meslek= "Gazeteci"
-    superman.yas=20
+    var superman = SuperKahraman("superman",20,"Gazeteci")
     var binding2=ActivityMainBinding.inflate(layoutInflater)
     setContentView(binding2.root)
     // Access views using View Binding
