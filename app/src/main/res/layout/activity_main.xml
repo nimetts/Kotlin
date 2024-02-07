@@ -3,32 +3,79 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="249dp"
-        android:layout_marginBottom="68dp"
-        android:text="Nimet Seyrek"
-        android:textColor="@color/purple_200"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
+    android:layout_height="match_parent"
+    android:textAlignment="center">
 
     <Button
         android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="5dp"
-        android:layout_marginBottom="257dp"
-        android:onClick="degistir"
-        android:text="İsmi Değiştir"
+        android:layout_width="236dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="49dp"
+        android:onClick="superKahramanYap"
+        android:text="Süper Kahraman Oluştur"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/meslekText" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="23dp"
+        android:layout_marginEnd="23dp"
+        android:layout_marginBottom="197dp"
+        android:text="isim: yaş: meslek:"
+        android:textAlignment="center"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/textView"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button" />
+
+    <EditText
+        android:id="@+id/isimText"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="41dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="16dp"
+        android:ems="10"
+        android:hint="Süper Kahraman İsmi"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/yasText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/yasText"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginEnd="26dp"
+        android:layout_marginBottom="19dp"
+        android:ems="10"
+        android:hint="Süper Kahraman Yaşı"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/meslekText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/isimText" />
+
+    <EditText
+        android:id="@+id/meslekText"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="51dp"
+        android:ems="10"
+        android:hint="Süper Kahraman Mesleği"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/yasText" />
 </androidx.constraintlayout.widget.ConstraintLayout>
